@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700;800&display=swap');
+
+$white: #fff;
+$bg-gradient: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%);
+body{
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    // font-family: 'Marcellus', serif;
+    font-family: 'Mulish', sans-serif;
+}
+.conteiner{
+    max-width: 1440px;
+    padding-left:15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    padding-left:15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.nav{
+   display: flex;
+   align-items: center;
+   list-style: none;
+   padding-left: 0;
+    &-item{
+        margin: 0 15px;
+    }
+    &-link{
+        text-decoration: none;
+        font-weight: 700;
+        color:rgba($white, 0.5);
+        &::after{
+            content:'';
+            opacity: 0;
+            display: block;
+            width: 100%;
+            height: 2px;
+            border-radius: 50px;
+            background: $bg-gradient;
+            
+            margin-top: 5px;
+        }
+        &.active{
+            color:rgba($white, 1);
+            &::after{
+                opacity: 1;
+            }
+        }
+    }
+}
+.control{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    &-item{
+        margin-left: 75px;
+    }
+    &-btn{
+        background-color: transparent;
+        border: none;
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &_search{
+            background-image: url(../img/search.svg);
+            width: 18px;
+            height: 18px;
+        }
+        &_notice{
+            background-image: url(../img/notice.svg);
+            width: 21px;
+            height: 23px;
+        }
+        &_account{
+            background-image: url(../img/accaunt.svg);
+            width: 18px;
+            height: 19px;
+        }
+    }
+}
+.section-banner{
+    border-bottom: 4px solid #2F2E2E;
+}
+
+.banner{
+ max-width: 562px;
+ &__title{
+ font-family: 'Marcellus', serif;
+ line-height: 75px ;
+ font-size: 80px;
+ }
+ &__text{
+   color: #C2C2C2;  
+   font-size: 18px;
+   line-height: 1.6;
+ }
+ &-info{
+    font-weight: 800;
+     &__year{
+         margin-right: 15px;
+     }
+     &__age{
+        margin-right: 15px;
+        position: relative;
+        width: 60px;
+        display: inline-block;
+        text-align: center;
+        &::before{
+            content: '';
+            display: block;
+            width:100%;
+            height: 24px;
+            background-image: url(../img/Rectangle\ 9.svg);
+            background-repeat:no-repeat;
+            background-size: cover;
+            position: absolute;
+            top:calc(50%-12px);
+            left: 0;
+            right: 0;
+        }
+    }
+    &__time{
+        margin-right: 15px;
+    }
+    &-year{
+        margin-right: 41px;
+    }
+ }
+}
